@@ -1,1 +1,0 @@
-# zephyrquizleague.github.io
