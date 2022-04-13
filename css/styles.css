@@ -318,7 +318,14 @@ background: #343434;
 .media.service-box {
   margin: 25px 0 36px;
   padding: 20px 15px 10px;
-  background: #FFFFFF;
+  background: #BEBEBE;
+  overflow: hidden;
+  border-bottom: 2px solid #E0E0E0;
+}
+.media.header-box {
+  margin: 25px 0 36px;
+  padding: 20px 15px 10px;
+  background: #274b60;
   overflow: hidden;
   border-bottom: 2px solid #E0E0E0;
 }
