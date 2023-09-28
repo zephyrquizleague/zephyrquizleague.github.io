@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dhruv's Stake Quiz!</title>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+        }
+
+        /* Define styles for the buttons */
+        h1 {
+            font-size: 2em;
+            color: #051c35;
+            margin-bottom: 10px;
+            text-align: left;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        hr {
+            border: none;
+            border-top: 3px solid #051c35;
+            margin: 10px 0;
+        }
+
+        .button-blue {
+            background-color: #0c4551;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button-blue:hover {
+            background-color: white;
+            color: #0c4551;
+            cursor: pointer;
+            border: 2px solid #0c4551;
+        }
+
+        .button-green {
+            background-color: #2D4628;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button-green:hover {
+            background-color: white;
+            color: #2D4628;
+            cursor: pointer;
+            border: 2px solid #2D4628;
+        }
+
+        .button-red {
+            background-color: #E83100;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button-red:hover {
+            background-color: white;
+            color: #E83100;
+            cursor: pointer;
+            border: 2px solid #E83100;
+        }
+
+        /* Player labels */
+        .player-label {
+            display: inline-block;
+            background-color: #6A4e34;
+            color: white;
+            padding: 20px 10px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1em;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+            width: 120px;
+        }
+
+        /* Define styles for the table */
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        /* Define styles for the text boxes */
+        input[type="text"] {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 8px 10px;
+            box-sizing: border-box;
+            border: 2px solid #4f4f4f;
+            border-radius: 16px;
+            background-color: #f8f8f8;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <h1>Current Player: <span id="currentPlayer">Player 1</span></h1>
+        <button class="button-blue" onclick="nextPlayer()">Next Player</button>
+    </span>
+    <hr>
+    <table>
+        <tr>
+            <div class="player-label" id="player1Label">Player 1:</div>
+            <button class="button-green" id="btn5" onclick="updateValue(5, 'display1')">5</button>
+            <button class="button-green" id="btn10" onclick="updateValue(10, 'display1')">10</button>
+            <button class="button-green" id="btn20" onclick="updateValue(20, 'display1')">20</button>
+            <button class="button-red" id="btn-20" onclick="updateValue(-20, 'display1')">-20</button>
+            <button class="button-red" id="btn-10" onclick="updateValue(-10, 'display1')">-10</button>
+            <button class="button-red" id="btn-5" onclick="updateValue(-5, 'display1')">-5</button>
+            <input type="text" id="display1" value="0">
+        </tr>
+        <hr>
+        <tr>
+            <div class="player-label" id="player2Label">Player 2:</div>
+            <button class="button-green" id="btn5b" onclick="updateValue(5, 'display2')">5</button>
+            <button class="button-green" id="btn10b" onclick="updateValue(10, 'display2')">10</button>
+            <button class="button-green" id="btn20b" onclick="updateValue(20, 'display2')">20</button>
+            <button class="button-red" id="btn-20b" onclick="updateValue(-20, 'display2')">-20</button>
+            <button class="button-red" id="btn-10b" onclick="updateValue(-10, 'display2')">-10</button>
+            <button class="button-red" id="btn-5b" onclick="updateValue(-5, 'display2')">-5</button>
+            <input type="text" id="display2" value="0">
+        </tr>
+        <hr>
+        <tr>
+            <div class="player-label" id="player3Label">Player 3:</div>
+            <button class="button-green" id="btn5c" onclick="updateValue(5, 'display3')">5</button>
+            <button class="button-green" id="btn10c" onclick="updateValue(10, 'display3')">10</button>
+            <button class="button-green" id="btn20c" onclick="updateValue(20, 'display3')">20</button>
+            <button class="button-red" id="btn-20c" onclick="updateValue(-20, 'display3')">-20</button>
+            <button class="button-red" id="btn-10c" onclick="updateValue(-10, 'display3')">-10</button>
+            <button class="button-red" id="btn-5c" onclick="updateValue(-5, 'display3')">-5</button>
+            <input type="text" id="display3" value="0">
+        </tr>
+        <hr>
+        <tr>
+            <div class="player-label" id="player4Label">Player 4:</div>
+            <button class="button-green" id="btn5d" onclick="updateValue(5, 'display4')">5</button>
+            <button class="button-green" id="btn10d" onclick="updateValue(10, 'display4')">10</button>
+            <button class="button-green" id="btn20d" onclick="updateValue(20, 'display4')">20</button>
+            <button class="button-red" id="btn-20d" onclick="updateValue(-20, 'display4')">-20</button>
+            <button class="button-red" id="btn-10d" onclick="updateValue(-10, 'display4')">-10</button>
+            <button class="button-red" id="btn-5d" onclick="updateValue(-5, 'display4')">-5</button>
+            <input type="text" id="display4" value="0">
+        </tr>
+        <hr>
+    </table>
+
+    <script>
+        // Define a function to update the value
+        function updateValue(value, displayId) {
+            // Get the current value from the text field
+            var currentValue = parseInt(document.getElementById(displayId).value);
+            // Add the button value to the current value
+            var newValue = currentValue + value;
+            // Update the text field with the new value
+            document.getElementById(displayId).value = newValue;
+        }
+        // Define the list of players
+        var players = ["Frodo & Salazar", "Sam & Rowena", "Merry & Godric", "Pippin & Helga"];
+
+        // Define a variable to keep track of the current player index
+        var currentPlayerIndex = 0;
+
+        // Function to update the current player and display it on the page
+        function updateCurrentPlayer() {
+            var currentPlayerElement = document.getElementById("currentPlayer");
+            currentPlayerElement.innerText = players[currentPlayerIndex];
+        }
+
+        // Function to update the current player label
+        function updateCurrentPlayerLabel() {
+            var playerLabels = document.querySelectorAll(".player-label");
+            playerLabels.forEach(function (label) {
+                label.style.backgroundColor = "#d6ccce";
+                label.style.color = "black";
+            });
+            var currentPlayerLabel = document.getElementById("player" + (currentPlayerIndex + 1) + "Label");
+            currentPlayerLabel.style.backgroundColor = "#6a4e34";
+            currentPlayerLabel.style.color = "white";
+        }
+
+        // Function to advance to the next player in the list
+        function nextPlayer() {
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
+            updateCurrentPlayer();
+            updateCurrentPlayerLabel();
+        }
+
+        // Initialize the page with the first player
+        updateCurrentPlayer();
+        updateCurrentPlayerLabel();
+        //Initialize labelnames based on player names
+        var player1Label = document.getElementById("player1Label");
+        player1Label.innerText = players[0];
+        var player2Label = document.getElementById("player2Label");
+        player2Label.innerText = players[1];
+        var player3Label = document.getElementById("player3Label");
+        player3Label.innerText = players[2];
+        var player4Label = document.getElementById("player4Label");
+        player4Label.innerText = players[3];
+
+    </script>
+</body>
+
+</html>
