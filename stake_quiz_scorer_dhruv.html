@@ -97,7 +97,7 @@
             font-size: 1em;
             border-radius: 5px;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-            width: 120px;
+            width: 200px;
         }
 
         /* Define styles for the table */
@@ -110,7 +110,7 @@
         }
 
         /* Define styles for the text boxes */
-        input[type="text"] {
+        .score {
             font-size: 20px;
             font-weight: bold;
             padding: 12px 20px;
@@ -133,47 +133,47 @@
     <hr>
     <table>
         <tr>
-            <div class="player-label" id="player1Label">Player 1:</div>
+            <input type="text" class="player-label" id="player1Label" style="width: 200px; white-space: normal;" value="Player 1">
             <button class="button-green" id="btn5" onclick="updateValue(5, 'display1')">5</button>
             <button class="button-green" id="btn10" onclick="updateValue(10, 'display1')">10</button>
             <button class="button-green" id="btn20" onclick="updateValue(20, 'display1')">20</button>
             <button class="button-red" id="btn-20" onclick="updateValue(-20, 'display1')">-20</button>
             <button class="button-red" id="btn-10" onclick="updateValue(-10, 'display1')">-10</button>
             <button class="button-red" id="btn-5" onclick="updateValue(-5, 'display1')">-5</button>
-            <input type="text" id="display1" value="0">
+            <input class="score" type="text" id="display1" value="0">
         </tr>
         <hr>
         <tr>
-            <div class="player-label" id="player2Label">Player 2:</div>
+            <input type="text" class="player-label" id="player2Label" style="width: 200px; white-space: normal;" value="Player 2">
             <button class="button-green" id="btn5b" onclick="updateValue(5, 'display2')">5</button>
             <button class="button-green" id="btn10b" onclick="updateValue(10, 'display2')">10</button>
             <button class="button-green" id="btn20b" onclick="updateValue(20, 'display2')">20</button>
             <button class="button-red" id="btn-20b" onclick="updateValue(-20, 'display2')">-20</button>
             <button class="button-red" id="btn-10b" onclick="updateValue(-10, 'display2')">-10</button>
             <button class="button-red" id="btn-5b" onclick="updateValue(-5, 'display2')">-5</button>
-            <input type="text" id="display2" value="0">
+            <input class="score" type="text" id="display2" value="0">
         </tr>
         <hr>
         <tr>
-            <div class="player-label" id="player3Label">Player 3:</div>
+            <input type="text" class="player-label" id="player3Label" style="width: 200px; white-space: normal;" value="Player 3">
             <button class="button-green" id="btn5c" onclick="updateValue(5, 'display3')">5</button>
             <button class="button-green" id="btn10c" onclick="updateValue(10, 'display3')">10</button>
             <button class="button-green" id="btn20c" onclick="updateValue(20, 'display3')">20</button>
             <button class="button-red" id="btn-20c" onclick="updateValue(-20, 'display3')">-20</button>
             <button class="button-red" id="btn-10c" onclick="updateValue(-10, 'display3')">-10</button>
             <button class="button-red" id="btn-5c" onclick="updateValue(-5, 'display3')">-5</button>
-            <input type="text" id="display3" value="0">
+            <input class="score" type="text" id="display3" value="0">
         </tr>
         <hr>
         <tr>
-            <div class="player-label" id="player4Label">Player 4:</div>
+            <input type="text" class="player-label" id="player4Label" style="width: 200px; white-space: normal;" value="Player 4">
             <button class="button-green" id="btn5d" onclick="updateValue(5, 'display4')">5</button>
             <button class="button-green" id="btn10d" onclick="updateValue(10, 'display4')">10</button>
             <button class="button-green" id="btn20d" onclick="updateValue(20, 'display4')">20</button>
             <button class="button-red" id="btn-20d" onclick="updateValue(-20, 'display4')">-20</button>
             <button class="button-red" id="btn-10d" onclick="updateValue(-10, 'display4')">-10</button>
             <button class="button-red" id="btn-5d" onclick="updateValue(-5, 'display4')">-5</button>
-            <input type="text" id="display4" value="0">
+            <input class="score" type="text" id="display4" value="0">
         </tr>
         <hr>
     </table>
